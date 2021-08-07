@@ -1,0 +1,29 @@
+{block content}
+    <div class="jumbotron mb-5">
+        <div class="container">
+            <h1 class="text-dark" n:block="title">All Projects</h1> 
+        </div>
+    </div>
+<div class="container">
+    <h5 class="mb-3"><a class="text-dark" n:href="Project:create" title="Add new"> <u>Add a new project</u></a> <i class="fas fa-plus-circle"></i></h5>    
+    <div class="row">
+        <div n:foreach="$projects as $project" class="col-12 col-sm-6 col-lg-4">
+            <div class="card mb-3">
+                {* <img class="card-img-top" src="..." alt="Card image cap"> *}
+                <div class="card-body">
+                    <h5 class="card-title">{$project->title} <a n:href="Project:edit $project->id"><i class="far fa-edit"></i></a> <a class="text-danger" n:href="Project:delete $project->id"><i class="far fa-trash-alt"></i></a></h5>
+                    <div class="d-flex flex-column">
+                        <small>Start Date: {$project->start_date|date:'F j, Y'}</small>
+                        <small>End Date: {$project->end_date|date:'F j, Y'}</small>
+                    </div>
+                    <span class="badge badge-dark">{$project->type_title}</span>
+                    <a n:href="Project:show $project->id" class="d-block mt-3">more details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+
+

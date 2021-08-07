@@ -1,0 +1,13 @@
+{block content}
+<div class="jumbotron mb-5">
+    <div class="container">
+        <h1 class="text-dark" n:block="title">Editting Project : "{$project->title}"</h1> 
+    </div>
+</div>
+<div class="container">
+    <p> <a n:href="Homepage:default"><i class="fas fa-chevron-left"></i> Back to Projects</a> </p>
+    <div class="row no-gutters">
+        {control projectForm}
+    </div>
+</div>
+{/block}
