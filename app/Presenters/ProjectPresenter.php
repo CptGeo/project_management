@@ -118,8 +118,8 @@ class ProjectPresenter extends Nette\Application\UI\Presenter{
         $this['projectForm']->setDefaults(array(
             'title' => $project->title,
             'type_id' => $project->type_id,
-            'start_date' => $project->start_date->format('Y-m-d') . "T" . $project->start_date->format('H:i:s'),
-            'end_date' => $project->end_date->format('Y-m-d') . "T" . $project->end_date->format('H:i:s')
+            'start_date' => $project->start_date->format('Y-m-d'),
+            'end_date' => $project->end_date->format('Y-m-d')
         ));
     }
 
