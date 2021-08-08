@@ -62,11 +62,11 @@ class ProjectPresenter extends Nette\Application\UI\Presenter{
             ->setRequired();
 
         $form->addText('start_date', "Start Date")
-            ->setHtmlType('datetime-local')
+            ->setHtmlType('date')
             ->setRequired();
 
         $form->addText('end_date', "End Date")
-            ->setHtmlType('datetime-local')
+            ->setHtmlType('date')
             ->setRequired();
 
         $form->addSubmit('send', "Publish Project");

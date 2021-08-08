@@ -11,8 +11,8 @@
         <div class="card-body">
             <h5 class="card-title">{$project->title} <a n:href="Project:edit $project->id"><i class="far fa-edit"></i></a> <a class="text-danger" n:href="Project:delete $project->id"><i class="far fa-trash-alt"></i></a></h5>
             <div class="d-flex flex-column">
-                <small>Start Date: {$project->start_date|date:'F j, Y - H:i'}</small>
-                <small>End Date: {$project->end_date|date:'F j, Y - H:i'}</small>
+                <small>Start Date: {$project->start_date|date:'F j, Y'}</small>
+                <small>End Date: {$project->end_date|date:'F j, Y'}</small>
             </div>
             <span class="badge badge-dark">{$type->title}</span>
         </div>
